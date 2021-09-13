@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
@@ -21,8 +21,8 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env'],
-          }
-        }
+          },
+        },
       },
       {
         test: /\.tsx?$/,
@@ -38,14 +38,20 @@ module.exports = {
         type: 'asset/inline',
       },
       {
-        test: /\.(scss|css)$/,
-        use: ['style-loader', {
-          loader: 'css-loader',
-          options: {
-            importLoaders: 1
-          }
-        }, 'postcss-loader'],
-      }
+        test: /\.less$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'less-loader',
+            options: {
+              lessOptions: {
+                javascriptEnabled: true,
+              },
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
@@ -62,5 +68,5 @@ module.exports = {
     open: true,
     hot: true,
     port: 9527,
-  }
-}
+  },
+};
