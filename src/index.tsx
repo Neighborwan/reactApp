@@ -1,13 +1,16 @@
-import { Button } from 'antd';
+import { Layout } from 'antd';
 import React from 'react';
 import ReactDom from 'react-dom';
 import 'antd/dist/antd.less';
+import './index.less';
+import Aside from './components/Aside';
 
 function App() {
   return (
-    <div>
-      <Button type="primary">click</Button>
-    </div>
+    <Layout className="main">
+      <Aside />
+      <Layout.Content>main</Layout.Content>
+    </Layout>
   );
 }
 

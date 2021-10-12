@@ -54,6 +54,9 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'hello world',
@@ -65,7 +68,6 @@ module.exports = {
   ],
   devtool: 'inline-source-map',
   devServer: {
-    open: true,
     hot: true,
     port: 9527,
   },
