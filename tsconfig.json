@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "src": ["src"]
+    },
     "outDir": "./dist/",
     "sourceMap": true,
     "module": "commonjs",
@@ -7,6 +11,6 @@
     "jsx": "react",
     "esModuleInterop": true,
     "allowJs": true,
-    "strict": true,
+    "strict": true
   }
 }

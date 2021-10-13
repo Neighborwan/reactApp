@@ -56,6 +56,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    alias: {
+      src: path.resolve(__dirname, './src'),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -70,5 +73,6 @@ module.exports = {
   devServer: {
     hot: true,
     port: 9527,
+    historyApiFallback: true,
   },
 };

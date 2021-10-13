@@ -1,17 +1,11 @@
-import { Layout } from 'antd';
 import React from 'react';
 import ReactDom from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config';
+import routes from './routes';
 import 'antd/dist/antd.less';
-import './index.less';
-import Aside from './components/Aside';
 
-function App() {
-  return (
-    <Layout className="main">
-      <Aside />
-      <Layout.Content>main</Layout.Content>
-    </Layout>
-  );
-}
-
-ReactDom.render(<App />, document.getElementById('root'));
+ReactDom.render(
+  <BrowserRouter>{renderRoutes(routes)}</BrowserRouter>,
+  document.getElementById('root'),
+);
