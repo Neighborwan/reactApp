@@ -4,6 +4,7 @@ import { RouteConfig } from 'react-router-config';
 import Home from '../pages/Home';
 import HelloWorld from '../pages/HelloWorld';
 import { Redirect } from 'react-router';
+import Counter from 'src/pages/Counter';
 
 const routes: RouteConfig[] = [
   {
@@ -21,6 +22,10 @@ const routes: RouteConfig[] = [
       {
         component: HelloWorld,
         path: '/reactApp/helloworld',
+      },
+      {
+        component: Counter,
+        path: '/reactApp/counter',
       },
       {
         path: '*',
