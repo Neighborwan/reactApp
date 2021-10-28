@@ -10,6 +10,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: '[name].bundle.js',
+    publicPath: '/',
   },
   mode: 'development',
   module: {
@@ -62,7 +63,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'hello world',
+      title: '阿巴阿巴',
       template: path.resolve(__dirname, './public/index.html'),
       filename: 'index.html',
     }),

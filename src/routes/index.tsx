@@ -10,17 +10,17 @@ const routes: RouteConfig[] = [
     component: App,
     routes: [
       {
-        component: () => <Redirect to="/home" />,
-        path: '/',
+        component: () => <Redirect to="/reactApp/home" />,
+        path: '/reactApp',
         exact: true,
       },
       {
         component: Home,
-        path: '/home',
+        path: '/reactApp/home',
       },
       {
         component: HelloWorld,
-        path: '/helloworld',
+        path: '/reactApp/helloworld',
       },
       {
         path: '*',
