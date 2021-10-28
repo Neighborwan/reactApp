@@ -12,6 +12,9 @@ export default function Aside() {
         <Menu.Item>
           <Link to="/reactApp/helloworld">女少贤</Link>
         </Menu.Item>
+        <Menu.Item>
+          <Link to="/reactApp/counter">王王京</Link>
+        </Menu.Item>
       </Menu>
     </Layout.Sider>
   );
