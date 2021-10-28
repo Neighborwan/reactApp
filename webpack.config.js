@@ -10,9 +10,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: '[name].bundle.js',
-    publicPath: '/',
+    publicPath: process.env.NODE_ENV === 'development' ? '/' : '/reactApp',
   },
-  mode: 'development',
+  mode: process.env.NODE_ENV,
   module: {
     rules: [
       {
