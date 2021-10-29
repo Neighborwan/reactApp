@@ -7,13 +7,13 @@ export default function Aside() {
     <Layout.Sider theme="light" collapsible>
       <Menu>
         <Menu.Item>
-          <Link to="/reactApp/home">麦基</Link>
+          <Link to="/home">麦基</Link>
         </Menu.Item>
         <Menu.Item>
-          <Link to="/reactApp/helloworld">女少贤</Link>
+          <Link to="/helloworld">女少贤</Link>
         </Menu.Item>
         <Menu.Item>
-          <Link to="/reactApp/counter">王王京</Link>
+          <Link to="/counter">王王京</Link>
         </Menu.Item>
       </Menu>
     </Layout.Sider>
